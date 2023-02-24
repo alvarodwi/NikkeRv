@@ -7,11 +7,11 @@ import logcat.LogPriority.VERBOSE
 import me.varoa.nikkerv.ext.toggleAppTheme
 
 class App : Application() {
-  override fun onCreate() {
-    super.onCreate()
-    // logcat I CAN HAZ LOGZ?
-    AndroidLogcatLogger.installOnDebuggableApp(this, minPriority = VERBOSE)
-    DynamicColors.applyToActivitiesIfAvailable(this)
-    toggleAppTheme(2)
-  }
+    override fun onCreate() {
+        super.onCreate()
+        // logcat I CAN HAZ LOGZ?
+        AndroidLogcatLogger.installOnDebuggableApp(this, minPriority = VERBOSE)
+        DynamicColors.applyToActivitiesIfAvailable(this)
+        toggleAppTheme(2)
+    }
 }

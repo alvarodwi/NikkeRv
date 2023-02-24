@@ -1,6 +1,6 @@
 package me.varoa.nikkerv.data.model
 
-enum class Rarity{
-  SSR,
-  SR
+enum class Rarity {
+    SSR,
+    SR
 }

@@ -9,12 +9,12 @@
 
   <com.google.android.material.appbar.MaterialToolbar
     android:id="@+id/toolbar"
-    app:title="@string/title_about"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"
-    app:navigationIcon="@drawable/ic_arrow_left" />
+    app:navigationIcon="@drawable/ic_arrow_left"
+    app:title="@string/title_about" />
 
   <ImageView
     android:id="@+id/ivProfile"
