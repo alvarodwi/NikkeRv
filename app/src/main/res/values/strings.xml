@@ -4,4 +4,21 @@
   <string name="menu_layout">Layout</string>
   <string name="menu_about">About</string>
   <string name="cd_imageview_icon">NIKKE Image Icon</string>
+  <string name="cd_imageview_fullbody">NIKKE Image Full Body</string>
+  <string name="menu_share">Share</string>
+  <string name="text_brief_description">%1$s %2$s NIKKE from %3$s</string>
+  <string name="text_detail_manufacturer">Manufacturer\t\t: %1$s</string>
+  <string name="text_detail_squad">Squad\t\t\t\t\t\t\t\t: %1$s</string>
+  <string name="text_detail_weapon">Weapon\t\t\t\t\t\t\t: %1$s (%2$s)</string>
+  <string name="text_detail_class">Class\t\t\t\t\t\t\t\t\t: %1$s</string>
+  <string name="text_detail_burst">Burst Type\t\t\t\t: %1$s</string>
+  <string name="share_detail">
+    Check this NIKKE out!\nhttps://www.prydwen.gg/nikke/characters/%1$s/\n- %2$s via prydwen.gg
+  </string>
+  <string name="cd_imageview_profile">Profile image</string>
+  <string name="profile_name">Alvaro Dwi Oktaviano</string>
+  <string name="profile_email">varoalvaro493@gmail.com</string>
+  <string name="profile_description">Mahasiswa di Universitas Padjadjaran. \nSekarang sedang kecanduan main game gacha.</string>
+  <string name="title_about">About</string>
+  <string name="title_detail">NIKKE Detail</string>
 </resources>

@@ -1,5 +1,6 @@
 package me.varoa.nikkerv.ui.adapter
 
+import android.annotation.SuppressLint
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -7,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
 import coil.ImageLoader
 import coil.request.ImageRequest
+import coil.transform.RoundedCornersTransformation
 import me.varoa.nikkerv.R
 import me.varoa.nikkerv.data.model.Nikke
 import me.varoa.nikkerv.databinding.ItemGridNikkeBinding
@@ -39,11 +41,15 @@ class NikkeAdapter(
 
   inner class NikkeViewHolder(private val binding: ViewBinding, private val itemType: Int) :
     RecyclerView.ViewHolder(binding.root) {
+    @SuppressLint("DiscouragedApi") // suppress getIdentifier, cause I'm trying to get the photo dynamically
     fun bind(data: Nikke?) {
       if (data == null) return
+      val ctx = binding.root.context
       binding.root.setOnClickListener { onClick(data) }
-      val imgBuilder = ImageRequest.Builder(binding.root.context).data(R.drawable.ic_arrow_left)
-        .allowHardware(true)
+      val imgBuilder = ImageRequest.Builder(ctx).data(
+        ctx.resources.getIdentifier("c${data.id}_mini", "drawable", ctx.packageName)
+      ).allowHardware(true)
+        .transformations(RoundedCornersTransformation(16f))
 
       when (itemType) {
         LAYOUT_LIST -> {
@@ -51,9 +57,13 @@ class NikkeAdapter(
             val imgData = imgBuilder.target(this.ivIcon).build()
             imageLoader.enqueue(imgData)
             tvName.text = data.name
-            tvDescription.text = "${data.burstType.string} ${data.rarity.name} NIKKE from ${
-              data.manufacturer.name.toLowerCase().capitalize()
-            }"
+            tvDescription.text =
+              ctx.getString(
+                R.string.text_brief_description,
+                data.burstType.string,
+                data.rarity.name,
+                data.manufacturer.name.lowercase().replaceFirstChar(Char::uppercase)
+              )
           }
         }
         else -> {
@@ -81,9 +91,9 @@ class NikkeAdapter(
   }
 
   override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NikkeViewHolder {
-    return if(viewType == LAYOUT_LIST) {
+    return if (viewType == LAYOUT_LIST) {
       NikkeViewHolder(parent.viewBinding(ItemListNikkeBinding::inflate), viewType)
-    }else{
+    } else {
       NikkeViewHolder(parent.viewBinding(ItemGridNikkeBinding::inflate), viewType)
     }
   }

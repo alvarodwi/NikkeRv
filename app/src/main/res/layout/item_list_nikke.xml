@@ -6,6 +6,7 @@
   android:layout_height="wrap_content"
   android:layout_marginBottom="8dp"
   android:clickable="true"
+  style="@style/Widget.Material3.CardView.Filled"
   android:focusable="true"
   app:cardCornerRadius="12dp">
 
@@ -16,19 +17,21 @@
 
     <ImageView
       android:id="@+id/ivIcon"
-      android:layout_width="64dp"
-      android:layout_height="64dp"
+      android:layout_width="96dp"
+      android:layout_height="96dp"
+      android:background="@drawable/bg_image_border"
       android:contentDescription="@string/cd_imageview_icon"
       app:layout_constraintStart_toStartOf="parent"
       app:layout_constraintTop_toTopOf="parent"
-      tools:src="@tools:sample/avatars" />
+      tools:src="@drawable/c010_mini" />
 
     <TextView
       android:id="@+id/tvName"
-      style="@style/TextAppearance.MaterialComponents.Headline5"
+      style="@style/TextAppearance.MaterialComponents.Headline6"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_marginStart="12dp"
+      android:layout_marginTop="16dp"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toEndOf="@id/ivIcon"
       app:layout_constraintTop_toTopOf="@id/ivIcon"
@@ -39,6 +42,8 @@
       style="@style/TextAppearance.MaterialComponents.Caption"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
+      android:layout_marginTop="4dp"
+      android:textColor="@color/material_on_surface_emphasis_high_type"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintStart_toStartOf="@id/tvName"
       app:layout_constraintTop_toBottomOf="@id/tvName"

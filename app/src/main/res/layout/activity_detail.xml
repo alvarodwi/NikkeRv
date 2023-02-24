@@ -6,4 +6,121 @@
   android:layout_height="match_parent"
   tools:context=".ui.DetailActivity">
 
+  <com.google.android.material.appbar.MaterialToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:menu="@menu/detail"
+    app:title="@string/title_detail"
+    app:navigationIcon="@drawable/ic_arrow_left" />
+
+  <ImageView
+    android:id="@+id/ivFullBody"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:contentDescription="@string/cd_imageview_fullbody"
+    android:scaleType="centerCrop"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar"
+    tools:src="@drawable/c222_fullbody" />
+
+  <TextView
+    android:id="@+id/tvRarity"
+    style="@style/TextAppearance.MaterialComponents.Headline4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="16dp"
+    android:fontFamily="More Fonts..."
+    android:textStyle="bold"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/toolbar"
+    tools:text="SSR"
+    tools:textColor="@color/nikke_ssr" />
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/cardInfo"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.NikkeRv.CardView.Detail">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      android:padding="16dp">
+
+      <TextView
+        android:id="@+id/tvName"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        tools:text="Rapi" />
+
+      <TextView
+        android:id="@+id/tvManufacturer"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_on_surface_emphasis_high_type"
+
+        tools:text="@string/text_detail_manufacturer" />
+
+      <TextView
+        android:id="@+id/tvSquad"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/material_on_surface_emphasis_high_type"
+        tools:text="@string/text_detail_squad" />
+
+      <TextView
+        android:id="@+id/tvWeapon"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:textColor="@color/material_on_surface_emphasis_high_type"
+        tools:text="@string/text_detail_weapon" />
+
+      <TextView
+        android:id="@+id/tvClass"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_on_surface_emphasis_high_type"
+
+        tools:text="@string/text_detail_class" />
+
+      <TextView
+        android:id="@+id/tvBurst"
+        style="@style/TextAppearance.MaterialComponents.Subtitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_on_surface_emphasis_high_type"
+
+        tools:text="@string/text_detail_burst" />
+
+      <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="8dp" />
+
+      <TextView
+        android:id="@+id/tvDescription"
+        style="@style/TextAppearance.MaterialComponents.Body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_on_surface_emphasis_high_type"
+        tools:text="@tools:sample/lorem" />
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

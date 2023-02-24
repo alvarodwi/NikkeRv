@@ -61,4 +61,8 @@
   <color name="md_theme_dark_surfaceTint">#FFB954</color>
   <color name="md_theme_dark_outlineVariant">#4F4539</color>
   <color name="md_theme_dark_scrim">#000000</color>
+
+<!--  static color -->
+  <color name="nikke_sr">#bf00fe</color>
+  <color name="nikke_ssr">#ffc000</color>
 </resources>

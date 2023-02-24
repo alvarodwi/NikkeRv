@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  tools:context=".ui.AboutActivity">
+
+  <com.google.android.material.appbar.MaterialToolbar
+    android:id="@+id/toolbar"
+    app:title="@string/title_about"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:navigationIcon="@drawable/ic_arrow_left" />
+
+  <ImageView
+    android:id="@+id/ivProfile"
+    android:layout_width="144dp"
+    android:layout_height="144dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="32dp"
+    android:contentDescription="@string/cd_imageview_profile"
+    tools:src="@drawable/profile" />
+
+  <TextView
+    style="@style/TextAppearance.MaterialComponents.Headline5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="24dp"
+    android:text="@string/profile_name"
+    android:textAlignment="center"
+    android:textStyle="bold" />
+
+  <TextView
+    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="8dp"
+    android:text="@string/profile_email"
+    android:textAlignment="center"
+    android:textColor="@color/material_on_surface_emphasis_medium" />
+
+  <com.google.android.material.divider.MaterialDivider
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="144dp"
+    android:layout_marginVertical="16dp" />
+
+  <TextView
+    style="@style/TextAppearance.MaterialComponents.Body2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="@string/profile_description"
+    android:textAlignment="center"
+    android:textColor="@color/material_on_surface_emphasis_medium" />
+</LinearLayout>
